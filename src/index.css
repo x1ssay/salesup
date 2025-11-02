@@ -1,0 +1,38 @@
+body{
+    background-color: #080110;
+}
+/* 1. Прячем системный курсор везде */
+* {
+  cursor: none !important; /* !important для надежности */
+}
+
+/* 2. Стилизуем нашу точку-курсор */
+#custom-cursor {
+
+  position: fixed;
+  /* Задаем размеры точки */
+  width: 10px;
+  height: 10px;
+  background-color: white; /* По умолчанию точка белая */
+  border-radius: 50%;
+
+  /* 3. Магия смешивания:
+     - Белый курсор на темном фоне = Белый
+     - Белый курсор на белом фоне = Черный
+  */
+  mix-blend-mode: difference;
+
+  /* 4. Технические моменты */
+  pointer-events: none; /* Позволяет кликать "сквозь" точку */
+  z-index: 9999;        /* Поверх всех остальных элементов */
+
+  /* 5. Центрирование:
+     JS будет задавать top/left,
+     а transform сместит точку так,
+     чтобы ее центр был точно на курсоре
+  */
+  transform: translate(-50%, -50%);
+  transition: opacity 0.3s ease-out;
+
+  /* Убираем лаг (не используем transition) */
+}
