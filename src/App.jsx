@@ -1,13 +1,13 @@
 import BubbleMenu from './Menu.jsx'
 import Aurora from './Background.jsx'
-import CustomCursor from './Cursor.jsx'
+import CustomCursor from './CustomCursor.jsx'
 
-function App() {
+const App = () => {
 	return (
 		<>
-            <CustomCursor />
-			<BubbleMenu logo={<span className='my-logo'>SalesUp</span>} />
+			<CustomCursor />
 			<Aurora />
+			<BubbleMenu logo={<span className='my-logo'>SalesUp</span>} />
 		</>
 	)
 }

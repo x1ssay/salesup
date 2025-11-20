@@ -1,8 +1,16 @@
 @font-face {
+    font-family: 'Oughter';
+    src: url('assets/fonts/Oughter.otf');
+}
+@font-face {
     font-family: 'Satoshi';
     src: url('assets/fonts/Satoshi-Variable.ttf');
 }
-a{
+@font-face {
+    font-family: 'Klaxon';
+    src: url('assets/fonts/Klaxon-Smooth.otf');
+}
+body{
     font-family: Satoshi;
 }
 .bubble-menu {
@@ -278,7 +286,7 @@ a{
 .my-logo{
     margin-top: -10px;
     color:  white;
-    font-family: Satoshi;
+    font-family: Oughter;
     font-size: 30px;
-    font-weight: 500;
+    font-weight: 10;
 }
